@@ -1,0 +1,191 @@
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    display: block;
+    list-style: none;
+  }
+}
+
+
+button.prev, button.next {
+  display: flex;
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  background-color: #5852529e;
+  width: 44px;
+  height: 100%;
+}
+
+button.prev {
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+
+button.next {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+
+.carousel-container {
+  width: 100%;
+  min-height: 350px;
+  background-color: $softGrey;
+}
+
+.carousel-card {
+
+}
+
+.carousel-controller {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+.carousel-header {
+  display: flex;
+}
+
+h3.carousel-subtitle {
+  font-family: 'Open Sans';
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: 400;
+}
+
+h2.carousel-title {
+  color: $docDarkBlue;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  margin-block-start: 0.4em;
+  margin-block-end: 0.2em;
+}
+
+.carousel-head-container {
+  padding-left: 10px;
+}
+
+.card-title {
+
+}
+
+.card-image-container {
+
+}
+
+.card-text {
+
+}
+
+.card-duration {
+
+}
+
+.card-infoarea {
+
+}
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+// skeleton loader - PLACEHOLDERS
+
+
+/*
+ * Card Skeleton for Loading
+ */
+
+.card {
+  width: 280px; //demo
+  height: var(--card-height);
+
+  &:empty::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, .1);
+
+    background-image: linear-gradient(
+                    90deg,
+                    rgba(lightgrey, 0) 0,
+                    rgba(lightgrey, .8) 50%,
+                    rgba(lightgrey, 0) 100%
+    ), //animation blur
+    var(--title-skeleton), //title
+    var(--desc-line-skeleton), //desc1
+    var(--desc-line-skeleton), //desc2
+    var(--avatar-skeleton), //avatar
+    var(--footer-skeleton), //footer bar
+    var(--card-skeleton) //card
+  ;
+
+    background-size: var(--blur-size),
+    var(--title-width) var(--title-height),
+    var(--desc-line-1-width) var(--desc-line-height),
+    var(--desc-line-2-width) var(--desc-line-height),
+    var(--avatar-size) var(--avatar-size),
+    100% var(--footer-height),
+    100% 100%;
+
+    background-position: -150% 0, //animation
+    var(--title-position), //title
+    var(--desc-line-1-position), //desc1
+    var(--desc-line-2-position), //desc2
+    var(--avatar-position), //avatar
+    var(--footer-position), //footer bar
+    0 0; //card
+
+    background-repeat: no-repeat;
+    animation: loading 1.5s infinite;
+  }
+}
+
+@keyframes loading {
+  to {
+    background-position: 350% 0,
+    var(--title-position),
+    var(--desc-line-1-position),
+    var(--desc-line-2-position),
+    var(--avatar-position),
+    var(--footer-position),
+    0 0;
+  }
+}
+
+
+/*
+ * Demo Stuff
+ */
+
