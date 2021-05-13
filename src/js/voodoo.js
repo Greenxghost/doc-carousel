@@ -8,8 +8,18 @@ const BACKGROUND_COLOR = '#030000';
 
 //Spectral asset
 const TENTACLE_COLOR_SPECTRAL = "#6fab5e";
-const TENTACLE_SPIRE_COLOR_SPECTRAL = "#e1e1e1";
+const TENTACLE_SPIRE_COLOR_SPECTRAL = "#000000";
 const BACKGROUND_COLOR_SPECTRAL = '#030000';
+
+//Enjoy the Silence asset
+const TENTACLE_COLOR_DEPECHE_MODE = "#FF0000";
+const TENTACLE_SPIRE_COLOR_DEPECHE_MODE = "#000000";
+const BACKGROUND_COLOR_DEPECHE_MODE = '#ffffff';
+
+//Select theme
+const TENTACLE_COLOR_SELECTED = TENTACLE_COLOR_SPECTRAL;
+const TENTACLE_SPIRE_COLOR_SELECTED = TENTACLE_SPIRE_COLOR_SPECTRAL;
+const BACKGROUND_COLOR_SELECTED = BACKGROUND_COLOR_SPECTRAL;
 
 
 const Random = (() => {
@@ -37,8 +47,8 @@ const Tentacle = (() => {
             this.y = y;
             this.angle = angle;
             this.segments = [];
-            this.fillColor = TENTACLE_COLOR;
-            this.strokeColor = TENTACLE_SPIRE_COLOR;
+            this.fillColor = TENTACLE_COLOR_SELECTED;
+            this.strokeColor = TENTACLE_SPIRE_COLOR_SELECTED;
             this.lineWidth = 0.25;
             this.segmentCount = Random.int(80, 220);
             this.thickness = Random.float(10, 50);
@@ -94,6 +104,7 @@ const Tentacle = (() => {
 })();
 
 const Scene = (() => {
+
     const MAX_TENTACLES = 6;
 
     class Scene {
@@ -160,7 +171,7 @@ const Renderer = (() => {
 
         render(scene) {
             this.context.globalAlpha = this.clearAlpha;
-            this.context.fillStyle = BACKGROUND_COLOR;
+            this.context.fillStyle = BACKGROUND_COLOR_SELECTED;
             this.context.fillRect(0, 0, this.width, this.height);
             this.context.globalAlpha = 1;
             scene.tentacles.forEach(tentacle => {
@@ -211,7 +222,7 @@ const Renderer = (() => {
             this.canvas.style.width = width + 'px';
             this.canvas.style.height = height + 'px';
             this.context.scale(scale, scale);
-            this.context.fillStyle = BACKGROUND_COLOR;
+            this.context.fillStyle = BACKGROUND_COLOR_SELECTED;
             this.context.fillRect(0, 0, width, height);
         }
     }
@@ -222,7 +233,7 @@ const Renderer = (() => {
 const init = () => {
     let width = window.innerWidth;
     let height = window.innerHeight;
-    const container = document.getElementById('spread');
+    const container = document.getElementById('invoke');
     const renderer = new Renderer(width, height);
     const scene = new Scene(width, height);
     container.appendChild(renderer.canvas);
@@ -241,5 +252,8 @@ const init = () => {
     update();
 };
 
-// if (document.readyState === 'complete') init()
-// else window.addEventListener('load', init);
+window.addEventListener('trackMalediction', init);
+
+
+// Listening dark words
+// window.dispatchEvent('trackMalediction');
