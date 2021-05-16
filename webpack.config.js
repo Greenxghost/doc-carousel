@@ -56,7 +56,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: './images',
+                            outputPath: 'assets/images',
                             name: "[name].[ext]",
                         },
                     },
@@ -64,7 +64,13 @@ module.exports = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=/fonts/[name].[ext]'
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/fonts'
+                    },
+                },
             },
             {
                 test: /\.html$/,
@@ -100,5 +106,6 @@ module.exports = {
     stats: {
         colors: true
     },
+
     devtool: 'source-map',
 };

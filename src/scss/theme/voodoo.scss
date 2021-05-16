@@ -1,7 +1,30 @@
-.malediction{
+$greenMagic: #417203;
 
+//here starts a malediction
 
-  //h2.carousel-title{
-  //  font-family: Vultures;
-  //}
+.malediction {
+
+  &.carousel-container {
+    background-image: url("../assets/images/background-paper2.jpg");
+  }
+
+  h2.carousel-title{
+    font-family: 'Vultures', 'Open Sans';
+    font-size: 39px;
+    color: $greenMagic;
+  }
+
+  h3.carousel-subtitle{
+    font-family: 'Vultures', 'Open Sans';
+    font-size: 39px;
+  }
+
+  .card-title{
+    font-family: 'Vultures', 'Open Sans';
+    font-size: 29px;
+    font-weight: 400;
+  }
 }
+
+
+//    padding: 10px 10px;     height: 350px;

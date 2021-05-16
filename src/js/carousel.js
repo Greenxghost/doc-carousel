@@ -21,35 +21,37 @@ export class Carousel {
         logElem.innerHTML += template;
     }
 
-
+    /**
+     *
+     * @param data
+     * @param cursed
+     * @returns {string}
+     */
     createCarousel(data, cursed) {
         let curse = cursed || false;
-        const test = true;
         const target = data.container;
-        // this.drawCards();
+        this.drawCards();
         if (this.dataCards) {
             return `
             <div class="carousel-container ${status = curse ? 'malediction' : ''}" data-carousel="${target}" id="carousel-1">
                 <div class="carousel-header">
                     <span class="page-icon material-icons"> ${data.icon} </span>
                     <div class="carousel-head-container">
-                        <h2 class="carousel-title">${data.title}</h2>
+                        <h2 class="carousel-title">${data.title} &#62; </h2>
                         <h3 class="carousel-subtitle">${data.subtitle}</h3>
                     </div>    
                 </div>
                 <data-carousel-${target} class="card-container"/>              
               ${this.startSkeleton()}
-                <div class="carousel-controller">
-                    <button class="carousel-controller-arrow prev" onclick="${this.showz(-1, target)}">&lt;
-                    </button>
-                    <button class="carousel-controller-arrow next" onclick="${this.showz(+1, target)}">&gt;
-                    </button>
-                </div>
             </div>
             `
         }
     }
 
+    /**
+     * @description generate 6 skeletons while loading cards
+     * @returns {string}
+     */
     startSkeleton() {
         let skeletons = "";
         for (let i = 0; i < this.loaders; i++) {
@@ -61,7 +63,7 @@ export class Carousel {
     }
 
     /**
-     * get seconds, display in format "1hr 0min" or "19:00" when lesser than 3600s
+     * @description get seconds, display in format "1hr 0min" or "19:00" when lesser than 3600s
      * @param time
      * @returns {string}
      */
@@ -86,7 +88,7 @@ export class Carousel {
      *
      * @param increase
      */
-    showz(increase, target) {
+    scroll(direction, target) {
         // this.index = index + increase;
         // this.index = Math.min(
         //     Math.max(index, 0),
@@ -105,7 +107,7 @@ export class Carousel {
     drawCards() {
         if (this.dataCarousel) {
             this.dataCards =
-                this.dataCarousel.fetchCard()
+                this.dataCarousel.fetchCard(this.randomNumber())
                     .then((data) => {
                         return data;
                     }).then((res) => {
@@ -124,8 +126,8 @@ export class Carousel {
         let cardTemplate = [];
 
         res.forEach((card) => {
-            let template = `<li class="carousel-card" data-type-card="collection">
-                    <div class="card-image-container ${card.cardinality = card.cardinality ? 'single' : 'collection'}">
+            let template = `<div class="carousel-card" data-type-card="${card.cardinality ? card.cardinality : 'single'}">
+                    <div class="card-image-container">
                         <img class="img1 card-image" src="${card.image}">
                             <div class="card-type">
                                 ${card.type}
@@ -139,17 +141,38 @@ export class Carousel {
                             ${card.title}
                         </div>
                         <div class="card-subtext">
-                            ${card.tag}
+                            ${card.lang ? card.lang : ''}
                         </div>
                     </div>
-                </li>`;
+                    ${card.cardinality === 'collection' ? this.createCollectionBorder() : ''}
+                </div>
+
+`;
+
 
             cardTemplate.push(template);
         });
+
+        const controller = `
+                <div class="carousel-controller">
+                    <button class="carousel-controller-arrow prev" onclick="${this.scroll(-1, target)}">&lt;
+                    </button>
+                    <button class="carousel-controller-arrow next" onclick="${this.scroll(+1, target)}">&gt;
+                    </button>
+                </div>
+            `;
+        cardTemplate.push(controller);
+
         let target = document.getElementsByTagName(`data-carousel-${this.dataCarousel.container}`);
         target[0].innerHTML = cardTemplate.join(" ");
-        return cardTemplate;
     };
+
+    createCollectionBorder() {
+        return `
+        <div class="collection-sidecard"> </div>
+        <div class="collection-sidecard-2"> </div>
+        `
+    }
 
     /** 100% not black magic
      *
@@ -158,6 +181,14 @@ export class Carousel {
 
     }
 
+
+    /**
+     * @description  returns a random integer from 1 to 3
+     * @returns {number}
+     */
+    randomNumber(){
+    return Math.floor(Math.random() * 3) + 1;
+    }
 
 }
 

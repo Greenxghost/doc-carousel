@@ -1,14 +1,12 @@
-//@font-face {
-//  font-family: Vultures;
-//  src: url('./fonts/Vultures-Regular.ttf');
-//}
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+@font-face {
+  font-family: 'Vultures';
+  src: url('./../assets/fonts/Vultures-Regular.ttf') format('truetype');
+}
 
 @import "./abstract/_mixin";
 @import "./abstract/_const";
-@import "./abstract/_fonts";
 
 @import "./theme/_skeleton";
 @import "./theme/carousel";

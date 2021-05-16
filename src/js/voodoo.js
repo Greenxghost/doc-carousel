@@ -1,5 +1,18 @@
 // And now, little child... let me play MY SONG:
 // Powered by tween.js (https://rawgit.com/moon/tween/master/tween.js) and my total-caffeine-fuelled madness - Greengho
+//               ,-.
+//              ,'  |
+//             /.__,|
+//            /((_)):
+//           /  `-' \
+//         ,'  ,--.  \
+//       .' , ((__))  `.
+//      '.':  `--'   \._)
+//         |  ,--.   :
+//         | ((__))  |
+//         |  `--'   |
+//        ,'..____..-`.
+//       `--..____...--'
 
 //standard asset
 const TENTACLE_COLOR = "#111111";
@@ -184,7 +197,7 @@ const Renderer = (() => {
                     sA = a.radius * a.scale;
                     this.context.beginPath();
 
-                    // *breath*... ok that's the real fun part
+                    // *breaths out*... ok that's the real fun part
 
                     if (i === 0) {
                         this.context.arc(a.x, a.y, sA, 0, TAU);
@@ -230,10 +243,19 @@ const Renderer = (() => {
     return Renderer;
 })();
 
+const affliction = () => {
+    const container = document.getElementsByClassName('malediction');
+    if(container) {
+        const oldGod = `<div ></div>`;
+
+    }
+}
+
 const init = () => {
     let width = window.innerWidth;
     let height = window.innerHeight;
-    const container = document.getElementById('invoke');
+    //choose the target id
+    const container = document.getElementById('nagakaborous');
     const renderer = new Renderer(width, height);
     const scene = new Scene(width, height);
     container.appendChild(renderer.canvas);
@@ -252,8 +274,10 @@ const init = () => {
     update();
 };
 
-window.addEventListener('trackMalediction', init);
-
-
 // Listening dark words
+window.addEventListener('trackMalediction', init);
 // window.dispatchEvent('trackMalediction');
+
+
+// apply the curse
+affliction();
