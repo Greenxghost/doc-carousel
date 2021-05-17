@@ -8,9 +8,9 @@ let result;
 
 /**
  * @description
- * @param chunkSize
- * @param cursed
- * @param timeout
+ * @param chunkSize - how many chunks?
+ * @param cursed - use the alternative theme
+ * @param timeout - wait for 'timeout' seconds before
  * @returns {Promise<unknown>}
  */
 export function callApi(chunkSize, cursed, timeout) {

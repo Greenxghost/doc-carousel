@@ -1,9 +1,11 @@
 export class Carousel {
 
-    index = 0;
+    visualIndex = 0;
     dataCards = [];
     dataCarousel;
-    loaders = 6;
+    loaders = 6; //skeleton numbers
+    dataContainer = [];
+    carouselContainer;
 
     constructor(data, curse) {
         this.dataCarousel = data;
@@ -12,7 +14,7 @@ export class Carousel {
     };
 
     /**
-     *
+     * @description
      * @param targetContainer
      * @param template
      */
@@ -22,7 +24,7 @@ export class Carousel {
     }
 
     /**
-     *
+     * @description
      * @param data
      * @param cursed
      * @returns {string}
@@ -40,16 +42,18 @@ export class Carousel {
                         <h2 class="carousel-title">${data.title} &#62; </h2>
                         <h3 class="carousel-subtitle">${data.subtitle}</h3>
                     </div>    
-                </div>
+            </div>
+            <div class="carousel-viewer">
                 <data-carousel-${target} class="card-container"/>              
               ${this.startSkeleton()}
             </div>
+           </div>
             `
         }
     }
 
     /**
-     * @description generate 6 skeletons while loading cards
+     * @description generate N skeletons while loading cards
      * @returns {string}
      */
     startSkeleton() {
@@ -84,23 +88,10 @@ export class Carousel {
         return ret;
     };
 
-    /**
-     *
-     * @param increase
-     */
-    scroll(direction, target) {
-        // this.index = index + increase;
-        // this.index = Math.min(
-        //     Math.max(index, 0),
-        //     liEls.length - 1
-        // );
-        // console.log(target);
-        // liEls[index].scrollIntoView({behavior: 'smooth'});
-    }
 
 
     /**
-     *
+     * @description prepare cards and call fetchCard/fakeAPI
      * @param fetchCards
      * @returns {*}
      */
@@ -118,15 +109,15 @@ export class Carousel {
     };
 
     /**
-     *
-     * @param fetchCards
+     * @description creates the template for cards and inserts them
+     * @param res
      * @returns {*}
      */
     getCards(res) {
         let cardTemplate = [];
 
-        res.forEach((card) => {
-            let template = `<div class="carousel-card" data-type-card="${card.cardinality ? card.cardinality : 'single'}">
+        res.forEach((card, index) => {
+            let template = `<div class="carousel-card" data-type-card="${card.cardinality ? card.cardinality : 'single'}" data-index-card="${index}">
                     <div class="card-image-container">
                         <img class="img1 card-image" src="${card.image}">
                             <div class="card-type">
@@ -146,27 +137,38 @@ export class Carousel {
                     </div>
                     ${card.cardinality === 'collection' ? this.createCollectionBorder() : ''}
                 </div>
-
 `;
-
 
             cardTemplate.push(template);
         });
 
-        const controller = `
-                <div class="carousel-controller">
-                    <button class="carousel-controller-arrow prev" onclick="${this.scroll(-1, target)}">&lt;
-                    </button>
-                    <button class="carousel-controller-arrow next" onclick="${this.scroll(+1, target)}">&gt;
-                    </button>
-                </div>
-            `;
-        cardTemplate.push(controller);
+
+        //generating buttons
+        const b1 = document.createElement("button");
+        b1.classList.add("carousel-controller-arrow", "prev");
+        b1.type = "button";
+        b1.innerHTML = "&lt;";
+        b1.addEventListener("click", () => this.scroll(-1));
+
+        const b2 = document.createElement("button");
+        b2.classList.add("carousel-controller-arrow", "next");
+        b2.type = "button";
+        b2.innerHTML = "&gt;";
+        b2.addEventListener("click", () => this.scroll(1));
 
         let target = document.getElementsByTagName(`data-carousel-${this.dataCarousel.container}`);
         target[0].innerHTML = cardTemplate.join(" ");
+        target[0].parentElement.appendChild(b1);
+        target[0].parentElement.appendChild(b2);
+        this.carouselContainer = target[0].querySelectorAll(".carousel-card");
+
     };
 
+
+    /**
+     * @description create double div for "collection" type cards
+     * @returns {string}
+     */
     createCollectionBorder() {
         return `
         <div class="collection-sidecard"> </div>
@@ -174,8 +176,8 @@ export class Carousel {
         `
     }
 
-    /** 100% not black magic
-     *
+    /**
+     * @description 100% not black magic
      */
     voodooProtocol() {
 
@@ -186,9 +188,42 @@ export class Carousel {
      * @description  returns a random integer from 1 to 3
      * @returns {number}
      */
-    randomNumber(){
-    return Math.floor(Math.random() * 3) + 1;
+    randomNumber() {
+        return Math.floor(Math.random() * 3) + 1;
     }
+
+
+    //CAROUSEL CONTROLLER
+
+
+    /**
+     *
+     * @param direction
+     */
+    scroll(direction) {
+        const tileWidth = 300;
+        var element = document.getElementsByTagName(`data-carousel-${this.dataCarousel.container}`)[0];
+        let value = (tileWidth)*direction;
+        let initialOffset = element.scrollLeft;
+        let newOffset = initialOffset + value;
+
+        if (newOffset !== 0){
+            element.offsetParent.querySelectorAll(".prev")[0].style.display = "block";
+        }else{
+            element.offsetParent.querySelectorAll(".prev")[0].style.display = "none";
+        }
+
+        if (newOffset >= (element.scrollWidth - element.clientWidth)){
+            element.offsetParent.querySelectorAll(".next")[0].style.display = "none";
+        }else{
+            element.offsetParent.querySelectorAll(".next")[0].style.display = "block";
+
+        }
+        element.scrollLeft = newOffset;
+    }
+
+
+
 
 }
 
