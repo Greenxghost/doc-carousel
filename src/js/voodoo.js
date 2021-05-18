@@ -1,5 +1,6 @@
 // And now, little child... let me play MY SONG:
-// Powered by tween.js (https://rawgit.com/moon/tween/master/tween.js) and my total-caffeine-fuelled madness - Greengho
+// Powered by tween.js (https://rawgit.com/moon/tween/master/tween.js)
+// and my total-caffeine-fuelled madness (https://codepen.io/Greenghost/pen/oNZbbMK) - Greengho
 //               ,-.
 //              ,'  |
 //             /.__,|
@@ -13,6 +14,9 @@
 //         |  `--'   |
 //        ,'..____..-`.
 //       `--..____...--'
+
+import {Tween} from "./tween";
+
 
 //standard asset
 const TENTACLE_COLOR = "#111111";
@@ -244,7 +248,6 @@ const Renderer = (() => {
 })();
 
 const affliction = () => {
-    const container = document.getElementsByClassName('malediction');
     if(container) {
         const oldGod = `<div ></div>`;
 
@@ -274,10 +277,14 @@ const init = () => {
     update();
 };
 
+
 // Listening dark words
 window.addEventListener('trackMalediction', init);
 // window.dispatchEvent('trackMalediction');
 
 
 // apply the curse
-affliction();
+//
+// const malediction = new Event('trackMalediction');
+//
+// window.dispatchEvent(malediction);

@@ -6,6 +6,7 @@ export class Carousel {
     loaders = 6; //skeleton numbers
     dataContainer = [];
     carouselContainer;
+    curse;
 
     constructor(data, curse) {
         this.dataCarousel = data;
@@ -30,13 +31,13 @@ export class Carousel {
      * @returns {string}
      */
     createCarousel(data, cursed) {
-        let curse = cursed || false;
+        this.curse = cursed || false;
         const target = data.container;
         this.drawCards();
         if (this.dataCards) {
             return `
-            <div class="carousel-container ${status = curse ? 'malediction' : ''}" data-carousel="${target}" id="carousel-1">
-                <div class="carousel-header">
+            <div class="carousel-container ${status = this.curse ? 'malediction' : ''}" data-carousel="${target}" id="carousel-1">
+                <div class="carousel-header" id="${status = this.curse ? 'nagakaborous' : ''}">
                     <span class="page-icon material-icons"> ${data.icon} </span>
                     <div class="carousel-head-container">
                         <h2 class="carousel-title">${data.title} &#62; </h2>
@@ -89,7 +90,6 @@ export class Carousel {
     };
 
 
-
     /**
      * @description prepare cards and call fetchCard/fakeAPI
      * @param fetchCards
@@ -105,7 +105,6 @@ export class Carousel {
                     this.getCards(res);
                 });
         }
-
     };
 
     /**
@@ -162,6 +161,11 @@ export class Carousel {
         target[0].parentElement.appendChild(b2);
         this.carouselContainer = target[0].querySelectorAll(".carousel-card");
 
+        // if (this.curse) {
+        //     const malediction = new Event('trackMalediction');
+        //     window.dispatchEvent(malediction);
+        // }
+
     };
 
 
@@ -203,26 +207,24 @@ export class Carousel {
     scroll(direction) {
         const tileWidth = 300;
         var element = document.getElementsByTagName(`data-carousel-${this.dataCarousel.container}`)[0];
-        let value = (tileWidth)*direction;
+        let value = (tileWidth) * direction;
         let initialOffset = element.scrollLeft;
         let newOffset = initialOffset + value;
 
-        if (newOffset !== 0){
+        if (newOffset !== 0) {
             element.offsetParent.querySelectorAll(".prev")[0].style.display = "block";
-        }else{
+        } else {
             element.offsetParent.querySelectorAll(".prev")[0].style.display = "none";
         }
 
-        if (newOffset >= (element.scrollWidth - element.clientWidth)){
+        if (newOffset >= (element.scrollWidth - element.clientWidth)) {
             element.offsetParent.querySelectorAll(".next")[0].style.display = "none";
-        }else{
+        } else {
             element.offsetParent.querySelectorAll(".next")[0].style.display = "block";
 
         }
         element.scrollLeft = newOffset;
     }
-
-
 
 
 }
