@@ -292,6 +292,8 @@ const init = () => {
     window.addEventListener('resize', resize);
     resize();
     update();
+    maledict.scrollIntoView();
+
 };
 
 

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5862b951-70b2-4eb8-84e9-54a25635d21e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/sound/VO_WD.mpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/voodoo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/voodoo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
       <workItem from="1621331343307" duration="1808000" />
       <workItem from="1621434549184" duration="502000" />
       <workItem from="1621435119289" duration="1771000" />
-      <workItem from="1621436950815" duration="625000" />
+      <workItem from="1621436950815" duration="1019000" />
     </task>
     <servers />
   </component>
