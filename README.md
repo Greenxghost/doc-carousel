@@ -72,7 +72,7 @@ Second Tab:
 npm run watch
 ```
 
-(optional) Third - Karma Test:
+(optional) Third - Jest Test:
 
 ```sh
 npm run test
