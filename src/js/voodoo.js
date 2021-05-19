@@ -275,7 +275,7 @@ const init = () => {
     const scene = new Scene(width, height);
     container.appendChild(renderer.canvas);
 
-    var audio = new Audio('../assets/sound/VO_WD.mpeg');
+    var audio = new Audio('../assets/sounds/VO_WD2.mpeg');
     audio.play();
 
     const update = () => {
