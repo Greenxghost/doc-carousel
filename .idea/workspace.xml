@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5862b951-70b2-4eb8-84e9-54a25635d21e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/sound/VO_WD.mpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/voodoo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/voodoo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/theme/_skeleton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/_skeleton.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/sound" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -43,18 +42,19 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\sound" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\images" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\fonts" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\scss" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\scss\abstract" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\scss\theme" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\images" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\fonts" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -134,7 +134,7 @@
       <workItem from="1621331343307" duration="1808000" />
       <workItem from="1621434549184" duration="502000" />
       <workItem from="1621435119289" duration="1771000" />
-      <workItem from="1621436950815" duration="79000" />
+      <workItem from="1621436950815" duration="625000" />
     </task>
     <servers />
   </component>
@@ -158,22 +158,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620398638673" />
-    <state width="1204" height="177" key="GridCell.Tab.0.bottom" timestamp="1621436963268">
+    <state width="1204" height="177" key="GridCell.Tab.0.bottom" timestamp="1621437299970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1204" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963268" />
-    <state width="1204" height="177" key="GridCell.Tab.0.center" timestamp="1621436963267">
+    <state width="1204" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621437299970" />
+    <state width="1204" height="177" key="GridCell.Tab.0.center" timestamp="1621437299970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1204" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963267" />
-    <state width="1204" height="177" key="GridCell.Tab.0.left" timestamp="1621436963267">
+    <state width="1204" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621437299970" />
+    <state width="1204" height="177" key="GridCell.Tab.0.left" timestamp="1621437299970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1204" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963267" />
-    <state width="1204" height="177" key="GridCell.Tab.0.right" timestamp="1621436963268">
+    <state width="1204" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621437299969" />
+    <state width="1204" height="177" key="GridCell.Tab.0.right" timestamp="1621437299970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1204" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963268" />
+    <state width="1204" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621437299970" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1620400083244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

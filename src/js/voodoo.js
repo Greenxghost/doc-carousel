@@ -274,6 +274,10 @@ const init = () => {
     const renderer = new Renderer(width, height);
     const scene = new Scene(width, height);
     container.appendChild(renderer.canvas);
+
+    var audio = new Audio('../assets/sound/VO_WD.mpeg');
+    audio.play();
+
     const update = () => {
         requestAnimationFrame(update);
         renderer.render(scene);
@@ -284,6 +288,7 @@ const init = () => {
         renderer.setSize(width, height);
         scene.setSize(width, height);
     };
+
     window.addEventListener('resize', resize);
     resize();
     update();
