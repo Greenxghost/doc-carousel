@@ -33,10 +33,14 @@ const TENTACLE_COLOR_DEPECHE_MODE = "#FF0000";
 const TENTACLE_SPIRE_COLOR_DEPECHE_MODE = "#000000";
 const BACKGROUND_COLOR_DEPECHE_MODE = '#ffffff';
 
+
+const BACKGROUND_COLOR_TRANSP = 'transparent';
+
+
 //Select theme
 const TENTACLE_COLOR_SELECTED = TENTACLE_COLOR_SPECTRAL;
 const TENTACLE_SPIRE_COLOR_SELECTED = TENTACLE_SPIRE_COLOR_SPECTRAL;
-const BACKGROUND_COLOR_SELECTED = BACKGROUND_COLOR_SPECTRAL;
+const BACKGROUND_COLOR_SELECTED = BACKGROUND_COLOR_TRANSP;
 
 
 const Random = (() => {
@@ -257,6 +261,14 @@ const affliction = () => {
 const init = () => {
     let width = window.innerWidth;
     let height = window.innerHeight;
+
+    //bonus: create invokation
+    const maledict = document.getElementsByClassName('malediction')[0];
+    const naga = document.createElement("div");
+    naga.setAttribute("id", "nagakaborous");
+    naga.innerHTML = "";
+    maledict.appendChild(naga);
+
     //choose the target id
     const container = document.getElementById('nagakaborous');
     const renderer = new Renderer(width, height);
@@ -280,11 +292,9 @@ const init = () => {
 
 // Listening dark words
 window.addEventListener('trackMalediction', init);
-// window.dispatchEvent('trackMalediction');
 
 
 // apply the curse
 //
 // const malediction = new Event('trackMalediction');
-//
 // window.dispatchEvent(malediction);

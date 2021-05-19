@@ -37,7 +37,7 @@ export class Carousel {
         if (this.dataCards) {
             return `
             <div class="carousel-container ${status = this.curse ? 'malediction' : ''}" data-carousel="${target}" id="carousel-1">
-                <div class="carousel-header" id="${status = this.curse ? 'nagakaborous' : ''}">
+                <div class="carousel-header"">
                     <span class="page-icon material-icons"> ${data.icon} </span>
                     <div class="carousel-head-container">
                         <h2 class="carousel-title">${data.title} &#62; </h2>
@@ -161,10 +161,19 @@ export class Carousel {
         target[0].parentElement.appendChild(b2);
         this.carouselContainer = target[0].querySelectorAll(".carousel-card");
 
-        // if (this.curse) {
-        //     const malediction = new Event('trackMalediction');
-        //     window.dispatchEvent(malediction);
-        // }
+
+        //attach and emit dark words
+        if (this.curse) {
+            const maledict = document.getElementsByClassName('malediction')[0];
+            const target = maledict.getElementsByClassName('material-icons');
+            target[0].addEventListener("click", () => {
+                const malediction = new Event('trackMalediction');
+                window.dispatchEvent(malediction)
+
+            });
+
+
+        }
 
     };
 

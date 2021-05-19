@@ -4,6 +4,14 @@ $greenMagic: #417203;
 
 .malediction {
 
+  #nagakaborous{
+    background-image: url('../assets/images/nagakaborous.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: invokation 1s ease-in-out forwards;
+  }
+
   &.carousel-container {
     background-image: url("../assets/images/background-paper2.jpg");
   }
@@ -26,5 +34,15 @@ $greenMagic: #417203;
   }
 }
 
+@keyframes invokation {
+  0% {
+    height: 0;
+  }
 
-//    padding: 10px 10px;     height: 350px;
+  100% {
+    height: 1100px;
+  }
+}
+
+
+

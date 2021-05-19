@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5862b951-70b2-4eb8-84e9-54a25635d21e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/OpenSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Vultures-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mask1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mask2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/mask3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tentacle1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tentacle2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tentacle3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tentacle4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/voodoomask1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/dataEntry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/fakeApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/voodoo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/abstract/_const.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/abstract/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/abstract/_mixin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/fonts/OpenSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/fonts/Vultures-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/site/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/theme/_skeleton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/theme/carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/voodoo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/voodoo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/_skeleton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/_skeleton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/theme/voodoo.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +43,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\images" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\fonts" />
-      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\scss" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\scss\abstract" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\scss\theme" />
       <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\images" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel\src\assets\fonts" />
+      <recent name="C:\Users\utente\Desktop\Workstation\doc-carousel" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -155,6 +131,10 @@
       <workItem from="1620684085196" duration="5360000" />
       <workItem from="1620735390615" duration="15945000" />
       <workItem from="1620783486106" duration="4462000" />
+      <workItem from="1621331343307" duration="1808000" />
+      <workItem from="1621434549184" duration="502000" />
+      <workItem from="1621435119289" duration="1771000" />
+      <workItem from="1621436950815" duration="79000" />
     </task>
     <servers />
   </component>
@@ -178,22 +158,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620398638673" />
-    <state width="947" height="289" key="GridCell.Tab.0.bottom" timestamp="1620784764646">
+    <state width="1204" height="177" key="GridCell.Tab.0.bottom" timestamp="1621436963268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620784764646" />
-    <state width="947" height="289" key="GridCell.Tab.0.center" timestamp="1620784764645">
+    <state width="1204" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963268" />
+    <state width="1204" height="177" key="GridCell.Tab.0.center" timestamp="1621436963267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620784764645" />
-    <state width="947" height="289" key="GridCell.Tab.0.left" timestamp="1620784764645">
+    <state width="1204" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963267" />
+    <state width="1204" height="177" key="GridCell.Tab.0.left" timestamp="1621436963267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620784764645" />
-    <state width="947" height="289" key="GridCell.Tab.0.right" timestamp="1620784764645">
+    <state width="1204" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963267" />
+    <state width="1204" height="177" key="GridCell.Tab.0.right" timestamp="1621436963268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="947" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620784764645" />
+    <state width="1204" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436963268" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1620400083244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,10 +234,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="559" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620663585090" />
-    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1620787758618">
+    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1621436555592">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="592" key="find.popup/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1620787758618" />
+    <state x="667" y="253" width="585" height="592" key="find.popup/0.0.1920.1040/-1920.195.1536.824@0.0.1920.1040" timestamp="1621436555592" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1620676698899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
