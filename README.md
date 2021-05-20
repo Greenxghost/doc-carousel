@@ -35,6 +35,7 @@ The Carousel uses a number of open source projects to work properly:
 - [Webpack] - the streaming build system
 - [Babel] - HTML
 - [ESlint] 
+- [Jest]
 
 ## Installation
 Install the dependencies and devDependencies and start the server.
@@ -85,6 +86,9 @@ For production release:
 ```sh
 npm run build
 ```
+
+#### Bonus info (invoking the old God)
+- Press the EYE ICON after the voodoo Carousel loaded
 
 ## License
 
